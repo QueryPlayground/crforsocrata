@@ -32,14 +32,11 @@ app.get('/callback', function (req, res) {
   }, saveToken);
 
   function saveToken(error, result) {
-    try {if (error) { console.log('Access Token Error', error.message); }
+    if (error) { console.log('Access Token Error', error.message); }
 
     result.expires_in = 2592000; // 30 days in seconds
 
     token = OAuth2.AccessToken.create(result);
-        } catch (e) {
-          console.log('something is wrong in save token');   
-        }
   };
 });
 
