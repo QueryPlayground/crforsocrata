@@ -1,0 +1,20 @@
+{
+  "name": "crforsocrata",
+  "version": "0.0.1",
+  "description": "Allows people to submit change requests for Socrata-hosted datasets and for Socrata users with write permissions to approve a change request and have the app make the change.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies" :
+  { "soda-js" : "latest",
+      "simple-oauth2": "latest",
+          "express": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
