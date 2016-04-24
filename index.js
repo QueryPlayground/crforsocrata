@@ -12,7 +12,7 @@ var oauth2 = require('simple-oauth2')({
 
 // Authorization uri definition
 var authorization_uri = oauth2.authCode.authorizeURL({
-  redirect_uri: 'http://localhost:3000/callback',
+  redirect_uri: 'http://crforsocrata.heroku.com/callback',
   scope: 'notifications',
   state: '3(#0/!~'
 });
