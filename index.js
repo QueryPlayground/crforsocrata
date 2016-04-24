@@ -28,7 +28,7 @@ app.get('/callback', function (req, res) {
 
   oauth2.authCode.getToken({
     code: code,
-    redirect_uri: 'http://localhost:3000/callback'
+    redirect_uri: 'https://crforsocrata.herokuapp.com/callback'
   }, saveToken);
 
   function saveToken(error, result) {
@@ -38,7 +38,7 @@ app.get('/callback', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-  res.send('Hello<br><a href="/auth">Log in with Github</a>');
+  res.send('Hello<br><a href="/auth">Log in with Socrata</a>');
 });
 
 app.listen(process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 5000);
