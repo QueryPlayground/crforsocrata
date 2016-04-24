@@ -32,7 +32,7 @@ app.get('/callback', function (req, res) {
   }, saveToken);
 
   function saveToken(error, result) {
-    if (error) { console.log('Access Token Error', error.message); }
+    if (error) { console.log('Access Token Error', error.message, 'result: ', result); }
 
     result.expires_in = 2592000; // 30 days in seconds
 
