@@ -33,7 +33,7 @@ app.get('/callback', function (req, res) {
 
   function saveToken(error, result) {
     if (error) { console.log('Access Token Error', error.message); }
-    result.expires_in = 3600; // 1 hour in seconds  
+    result.expires_in = 3600; // 1 hour in seconds
     token = oauth2.accessToken.create(result);
   }
 });
