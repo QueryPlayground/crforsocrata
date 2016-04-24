@@ -5,7 +5,7 @@ var express = require('express'),
 var oauth2 = require('simple-oauth2')({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  site: 'https://opendata.socrata.com',
+  site: 'https://data.seattle.gov',
   tokenPath: '/oauth/access_token',
   authorizationPath: '/oauth/authorize'
 });
