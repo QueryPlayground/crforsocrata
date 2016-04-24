@@ -7,10 +7,11 @@
     "example": "examples",
     "test": "test"
   },
-  "dependencies" :
-  { "soda-js" : "latest",
-      "simple-oauth2": "latest",
-          "express": "latest"
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "latest",
+    "simple-oauth2": "latest",
+    "soda-js": "latest"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
