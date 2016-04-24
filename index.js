@@ -34,6 +34,7 @@ app.get('/callback', function (req, res) {
   function saveToken(error, result) {
     if (error) { console.log('Access Token Error', error.message); }
     result.expires_in = '3600'; // 1 hour in seconds
+    console.log(JSON.stringify(result));
     token = oauth2.accessToken.create(result);
   }
 });
@@ -44,4 +45,4 @@ app.get('/', function (req, res) {
 
 app.listen(process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 5000);
 
-console.log('Express server started on port 3000');
+console.log('Express server started on port 5000');
