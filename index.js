@@ -1,9 +1,10 @@
+require('dotenv').load({silent: true});
 var express = require('express'),
     app = express();
 
 var oauth2 = require('simple-oauth2')({
-  clientID: CLIENT_ID,
-  clientSecret: CLIENT_SECRET,
+  clientID: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
   site: 'https://opendata.socrata.com',
   tokenPath: '/oauth/access_token',
   authorizationPath: '/oauth/authorize'
